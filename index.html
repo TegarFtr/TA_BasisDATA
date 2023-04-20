@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poliklinik | Landing Page</title>
+
+    <!-- Custom Css -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        list-style: none;
+        text-decoration: none;
+        }
+
+        header {
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 33px 9%;
+            background: transparent;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            min-width: 100vh;
+            position: relative;
+            background: linear-gradient(250deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 2rem;
+        }
+
+        section {
+            padding: 0 19%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 90px;
+            line-height: 1;
+            color: white;
+            margin: 0 0 20px;
+        }
+
+        .hero-text p {
+            color: white;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 40px;
+        }
+
+        .hero-img {
+            margin-left: 200px;
+        }
+
+        .hero-text a {
+            display: inline-block;
+            color: white;
+            background: #4d9559;
+            border: 1px solid transparent;
+            padding: 12px 30px;
+            line-height: 1.4;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: all .55s ease;
+        }
+
+        .hero-text a:hover{
+            background: transparent;
+            border: 1px solid white;
+            transform: translateX(8px);
+        }
+
+        .hero-text a.daftar {
+            background: transparent;
+            border: 1px solid white;
+            margin-left: 20px;
+        }
+
+        .hero-text a i {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header {
+            padding: 20px 5%;
+            }
+            .hero {
+            grid-template-columns: 1fr;
+            padding: 80px 5% 40px;
+            gap: 3rem;
+            }
+
+            .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            }
+
+            .hero-text p {
+            margin-bottom: 30px;
+            }
+
+            .hero-img {
+            display: none;
+            }
+        }
+
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            header {
+            padding: 25px 7%;
+            }
+
+            .hero {
+            padding: 100px 7% 60px;
+            }
+
+            .hero-text h1 {
+            font-size: 60px;
+            }
+
+            .hero-text p {
+            margin-bottom: 30px;
+            }
+
+            .hero-img {
+            width: 60%;
+            height: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Poliklinik UM</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Poliklinik UM</h1>
+            <p>Jika anda sakit atau kurang enak badan, Segera ke <br>Poliklinik Universitas Negeri Malang <br>Masuk atau Daftar pada link dibawah.</p>
+            <a href="login.php"><i class="ri-login-circle-fill"></i>MASUK</a>
+            <a href="register.php" class="daftar"><i class="ri-registered-fill"></i>DAFTAR</a>
+        </div>
+        <div class="hero-img">
+            <img src="img/UM.png" alt="">
+        </div>
+    </section>
+</body>
+</html>

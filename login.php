@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'koneksi.php';
+    include 'src/koneksi.php';
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = $_POST['lusername'];
         $password = $_POST['lpassword'];
@@ -54,15 +54,12 @@
         body{
             font-family: 'Poppins', sans-serif;
             background: #ececec;
+            background: linear-gradient(250deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
         }
-
-        /*------------ Login container ------------*/
 
         .box-area{
             width: 450px;
         }
-
-        /*------------ box ------------*/
 
         .box{
             padding: 40px 30px 40px 40px;
@@ -87,8 +84,6 @@
             box-sizing: border-box;
         }
 
-        /*------------ Custom Placeholder ------------*/
-
         ::placeholder{
             font-size: 16px;
         }
@@ -99,9 +94,6 @@
         .rounded-5{
             border-radius: 30px;
         }
-
-
-        /*------------ For small screens------------*/
 
         @media only screen and (max-width: 768px){
 
@@ -118,48 +110,34 @@
 </head>
 <body>
 
-    <!----------------------- Main Container -------------------------->
-
-     <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
-
-    <!----------------------- Login Container -------------------------->
-
-       <div class="row border rounded-5 p-3 bg-white shadow box-area">
-
-    <!-------------------- ------ Box ---------------------------->
-        
-       <div class="col-md-12 box justify-content-center d-flex">
-          <div class="row align-items-center">
-                <div class="header-text mb-4">
-                     <h2>Welcome back</h2>
-                     <p>Senang melihat anda kembali.</p>
-                </div>
-                <form method="post" action="">
-                    <div class="login-form mb-3">
-                        <label for="lusername" class="form-label">Password</label>
-                        <input type="text" name="lusername" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <div class="col-md-12 box justify-content-center d-flex">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Welcome back</h2>
+                        <p>Senang melihat anda kembali.</p>
                     </div>
-                    <div class="login-form mb-1">
-                        <label for="lpassword" class="form-label">Password</label>
-                        <input type="password" name="lpassword" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
-                    </div>
-                    <div class="input-group mb-5 d-flex justify-content-between">
-                        <div class="forgot">
-                            <small><a href="#" class="text-decoration-none">Lupa Password?</a></small>
+                    <form method="post" action="">
+                        <div class="login-form mb-3">
+                            <label for="lusername" class="form-label">Password</label>
+                            <input type="text" name="lusername" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-success w-100 fs-6">Masuk</button>
-                    </div>
-                    
-                    <div class="row text-center ">
-                        <small>Tidak punya akun? <a href="register.php" class="text-decoration-none">Daftar</a></small>
-                    </div>
-                </form>
-          </div>
-       </div> 
-
-      </div>
+                        <div class="login-form mb-1">
+                            <label for="lpassword" class="form-label">Password</label>
+                            <input type="password" name="lpassword" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-lg btn-success w-100 fs-6" style="margin-top: 40px">Masuk</button>
+                        </div>
+                        
+                        <div class="row text-center ">
+                            <small>Tidak punya akun? <a href="register.php" class="text-decoration-none">Daftar</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
     </div>
 
 </body>

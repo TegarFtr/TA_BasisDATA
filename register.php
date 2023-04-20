@@ -1,13 +1,13 @@
 <?php
     session_start();
-    include 'koneksi.php';
+    include 'src/koneksi.php';
 
     //jika tombol daftar diklik
     if(isset($_POST['rdaftar'])){
         $level_id = 3;
         $simpan = mysqli_query($koneksi, 
         "INSERT INTO user (nik, nama, username, userpass, level_id)
-         VALUES ('$_POST[rnik]', '$_POST[rnama]', '$_POST[rusername]', '$_POST[rpassword]', '$level_id')");
+        VALUES ('$_POST[rnik]', '$_POST[rnama]', '$_POST[rusername]', '$_POST[rpassword]', '$level_id')");
         if($simpan){
             echo '<script> alert("Pendaftaran Berhasil");
             document.location="login.php";</script>';
@@ -34,15 +34,13 @@
         body{
             font-family: 'Poppins', sans-serif;
             background: #ececec;
+            background: linear-gradient(250deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
         }
-
-        /*------------ Login container ------------*/
 
         .box-area{
             width: 450px;
         }
 
-        /*------------ box ------------*/
 
         .box{
             padding: 40px 30px 40px 40px;
@@ -66,8 +64,6 @@
             box-sizing: border-box;
         }
 
-        /*------------ Custom Placeholder ------------*/
-
         ::placeholder{
             font-size: 16px;
         }
@@ -78,9 +74,6 @@
         .rounded-5{
             border-radius: 30px;
         }
-
-
-        /*------------ For small screens------------*/
 
         @media only screen and (max-width: 768px){
 
