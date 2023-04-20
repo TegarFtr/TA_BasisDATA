@@ -15,7 +15,7 @@
                 $_SESSION['username'] = $username;
                 $_SESSION['level_id'] = 1;
                 echo '<script> alert("Anda Berhasil Login Admin");
-                document.location="dasboard.php";</script>';
+                document.location="admin/dasboard.php";</script>';
             }
             elseif($data['level_id'] == 2){
                 $_SESSION['username'] = $username;
