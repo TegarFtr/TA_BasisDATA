@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins" , sans-serif;
+      }
+      .sidebar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 78px;
+        background: #11101D;
+        padding: 6px 14px;
+        z-index: 99;
+        transition: all 0.5s ease;
+      }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button class="sidebar-button" data-target="#sidebar1">Sidebar 1</button>
+        <button class="sidebar-button" data-target="#sidebar2">Sidebar 2</button>
+
+    </div>
+    <div id="sidebar1" class="sidebar">
+        <h2>Sidebar 1</h2>
+        <p>Ini adalah konten untuk sidebar 1.</p>
+      </div>
+      
+      <div id="sidebar2" class="sidebar">
+        <h2>Sidebar 2</h2>
+        <p>Ini adalah konten untuk sidebar 2.</p>
+      </div>
+      
+</body>
+</html>
